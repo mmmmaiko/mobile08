@@ -1,0 +1,18 @@
+.DS_Store
+Thumbs.db
+
+# ログ
+*.log
+
+# 一時ファイル
+*.tmp
+*.swp
+*.bak
+
+# 環境変数（もし使うなら）
+.env
+.env.*
+
+# エディタ
+.vscode/
+.idea/
