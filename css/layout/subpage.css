@@ -1,0 +1,131 @@
+/* ─── 下層ページ共通レイアウト ─── */
+.subpage-hero {
+  position: relative;
+  padding: 64px 16px 48px;
+  background: var(--c-ink);
+  color: var(--c-white);
+  text-align: center;
+  overflow: hidden;
+}
+
+.subpage-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(26, 26, 26, 0.55), rgba(26, 26, 26, 0.75)),
+    url('../../img/AdobeStock_280180202.jpeg') center / cover no-repeat;
+  z-index: 0;
+}
+
+.subpage-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-w);
+  margin: 0 auto;
+}
+
+.subpage-hero__en {
+  font-family: var(--ff-sans);
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  color: var(--c-gold);
+}
+
+.subpage-hero__title {
+  font-family: var(--ff-serif);
+  font-size: 32px;
+  margin-top: 10px;
+  letter-spacing: 0.16em;
+  color: var(--c-white);
+}
+
+.subpage-hero__lead {
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+@media (min-width: 768px) {
+  .subpage-hero { padding: 88px 24px 64px; }
+  .subpage-hero__title { font-size: 40px; }
+  .subpage-hero__lead { font-size: 16px; }
+}
+
+.subpage-body {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 56px var(--gutter-sm) 40px;
+}
+
+@media (min-width: 768px) {
+  .subpage-body { padding: 80px var(--gutter) 56px; }
+}
+
+/* ─── お問い合わせページ ─── */
+.contact-intro {
+  padding: 24px 20px;
+  background: var(--c-paper);
+  border: 1px solid var(--c-line);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.contact-intro__text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--c-text);
+}
+
+.contact-intro__sub {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-intro__tel {
+  font-family: var(--ff-serif);
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  color: var(--c-ink);
+}
+
+.contact-intro__tel span {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  color: var(--c-primary);
+}
+
+.contact-intro__line {
+  display: inline-block;
+  padding: 10px 24px;
+  background: var(--c-line-green);
+  color: var(--c-white);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  border-radius: 2px;
+}
+
+.contact-form {
+  background: var(--c-white);
+  border: 1px solid var(--c-line);
+  overflow: hidden;
+}
+
+.contact-form iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.sp-only { display: inline; }
+
+@media (min-width: 768px) {
+  .sp-only { display: none; }
+  .contact-intro__sub { flex-direction: row; justify-content: center; gap: 20px; }
+}

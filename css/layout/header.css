@@ -1,0 +1,67 @@
+/* ─── モバイルヘッダー（PC では非表示） ─── */
+.mobile-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(26, 26, 26, 0.92);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: var(--c-white);
+}
+
+.mobile-header__logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.mobile-header__logo-jp {
+  font-family: var(--ff-serif);
+  font-size: 18px;
+  letter-spacing: 0.08em;
+}
+
+.mobile-header__logo-en {
+  font-family: var(--ff-sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: var(--c-gold);
+  margin-top: 2px;
+}
+
+/* ─── ハンバーガー ─── */
+.btn-hamburger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-hamburger span {
+  width: 22px;
+  height: 2px;
+  background: var(--c-white);
+  transition: transform var(--t-base), opacity var(--t-base);
+}
+
+body.menu-open .btn-hamburger span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+body.menu-open .btn-hamburger span:nth-child(2) {
+  opacity: 0;
+}
+body.menu-open .btn-hamburger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (min-width: 1024px) {
+  .mobile-header { display: none; }
+}

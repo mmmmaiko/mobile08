@@ -1,0 +1,83 @@
+/* ─── テイクアウト ─── */
+.takeout__lead {
+  text-align: center;
+  font-size: 15px;
+  line-height: 2;
+  color: var(--c-muted);
+  margin-bottom: 36px;
+}
+
+.takeout__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.takeout__card {
+  background: var(--c-paper);
+  border: 1px solid var(--c-line);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.takeout__photo {
+  margin: -12px -12px 12px;
+  overflow: hidden;
+}
+
+.takeout__photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.takeout__name {
+  font-family: var(--ff-serif);
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  color: var(--c-ink);
+  margin-bottom: 6px;
+}
+
+.takeout__desc {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--c-muted);
+  flex: 1;
+}
+
+.takeout__price {
+  margin-top: 10px;
+  font-family: var(--ff-serif);
+  font-size: 18px;
+  color: var(--c-primary);
+  letter-spacing: 0.04em;
+}
+
+.takeout__pdf {
+  margin-top: 40px;
+}
+
+.takeout__pdf-label {
+  text-align: center;
+  font-family: var(--ff-serif);
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  color: var(--c-primary);
+  margin-bottom: 16px;
+}
+
+.takeout__note {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--c-muted);
+  letter-spacing: 0.06em;
+}
+
+@media (min-width: 768px) {
+  .takeout__grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .takeout__name { font-size: 17px; }
+  .takeout__desc { font-size: 13px; }
+}

@@ -1,0 +1,124 @@
+/* ─── モバイル用ドロワー ─── */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(86vw, 360px);
+  height: 100vh;
+  background: var(--c-ink);
+  color: var(--c-white);
+  transform: translateX(100%);
+  transition: transform var(--t-base);
+  z-index: 60;
+  overflow-y: auto;
+  padding: 28px 24px;
+}
+
+body.menu-open .drawer {
+  transform: translateX(0);
+}
+
+.drawer[aria-hidden="false"] { transform: translateX(0); }
+
+.drawer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-height: 100%;
+}
+
+.drawer__logo {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.drawer__logo-jp {
+  font-family: var(--ff-serif);
+  font-size: 22px;
+  letter-spacing: 0.1em;
+}
+
+.drawer__logo-en {
+  font-family: var(--ff-sans);
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  color: var(--c-gold);
+  margin-top: 6px;
+}
+
+.drawer__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer__link {
+  display: block;
+  padding: 14px 4px;
+  font-family: var(--ff-serif);
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.drawer__cta {
+  margin-top: auto;
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drawer__tel {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  border: 1px solid var(--c-primary-light);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.drawer__tel-label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--c-gold);
+}
+
+.drawer__tel-num {
+  font-family: var(--ff-serif);
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.drawer__line {
+  display: block;
+  padding: 12px;
+  background: var(--c-line-green);
+  text-align: center;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+}
+
+/* ─── オーバーレイ ─── */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--t-base), visibility var(--t-base);
+  z-index: 50;
+}
+
+body.menu-open .drawer-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-open { overflow: hidden; }
+
+@media (min-width: 1024px) {
+  .drawer,
+  .drawer-overlay { display: none; }
+}

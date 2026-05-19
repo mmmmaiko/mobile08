@@ -1,0 +1,57 @@
+/* ─── 店内紹介 ─── */
+.interior__lead {
+  text-align: center;
+  font-size: 15px;
+  line-height: 2;
+  color: var(--c-muted);
+  margin-bottom: 36px;
+}
+
+.interior__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.interior__card {
+  background: var(--c-paper);
+  border: 1px solid var(--c-line);
+}
+
+.interior__photo img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.interior__body {
+  padding: 20px 18px 22px;
+}
+
+.interior__title {
+  font-family: var(--ff-serif);
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  color: var(--c-ink);
+  margin-bottom: 8px;
+  padding-left: 12px;
+  border-left: 2px solid var(--c-primary);
+}
+
+.interior__text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--c-text);
+}
+
+.interior__cap {
+  margin-top: 10px;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  color: var(--c-primary);
+}
+
+@media (min-width: 768px) {
+  .interior__lead { font-size: 16px; }
+  .interior__text { font-size: 16px; }
+}

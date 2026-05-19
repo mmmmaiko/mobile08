@@ -1,0 +1,87 @@
+/* ─── お品書き ─── */
+.menu__lead {
+  text-align: center;
+  font-size: 15px;
+  line-height: 2;
+  color: var(--c-muted);
+  margin-bottom: 36px;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.menu__item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 14px;
+  padding: 14px;
+  background: var(--c-white);
+  border: 1px solid var(--c-line);
+}
+
+.menu__photo img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.menu__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu__name {
+  font-family: var(--ff-serif);
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  color: var(--c-ink);
+}
+
+.menu__desc {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--c-muted);
+}
+
+.menu__price {
+  margin-top: auto;
+  font-family: var(--ff-serif);
+  font-size: 18px;
+  color: var(--c-primary);
+  letter-spacing: 0.06em;
+}
+
+.menu__price span {
+  font-size: 11px;
+  color: var(--c-muted);
+  margin-left: 4px;
+}
+
+.menu__pdf {
+  margin-top: 40px;
+}
+
+.menu__pdf-label {
+  text-align: center;
+  font-family: var(--ff-serif);
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  color: var(--c-primary);
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .menu__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .menu__item { grid-template-columns: 140px 1fr; padding: 16px; }
+  .menu__name { font-size: 18px; }
+  .menu__desc { font-size: 14px; }
+  .menu__price { font-size: 20px; }
+}

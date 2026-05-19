@@ -1,0 +1,56 @@
+html { font-size: var(--fs-base); }
+
+body {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-base);          /* 18px 本文 */
+  line-height: var(--lh-base);
+  color: var(--c-text);
+  background: var(--c-paper);
+  font-feature-settings: "palt";
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--ff-serif);
+  font-weight: 500;
+  line-height: var(--lh-tight);
+  color: var(--c-ink);
+  letter-spacing: 0.04em;
+}
+
+p { line-height: var(--lh-base); }
+
+a { transition: opacity var(--t-base); }
+a:hover { opacity: 0.7; }
+
+::selection { background: var(--c-primary); color: #fff; }
+
+/* ─── 共通レイアウト ─── */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--content-w);     /* 768px */
+  margin: 0 auto;
+  padding: 0 var(--gutter-sm);
+}
+
+@media (min-width: 768px) {
+  .container { padding: 0 var(--gutter); }
+}
+
+/* ─── PC でサイド固定 ＋ メイン横並び ─── */
+@media (min-width: 1024px) {
+  body {
+    padding-left: var(--sidebar-w);
+  }
+  main { width: 100%; }
+}

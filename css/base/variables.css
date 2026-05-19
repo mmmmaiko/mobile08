@@ -1,0 +1,50 @@
+:root {
+  /* ─── カラー（朱赤 × 黒 × 白 × 和の差し色） ─── */
+  --c-primary:       #a8331f;   /* 朱赤 */
+  --c-primary-dark:  #7a1f10;   /* 深い臙脂 */
+  --c-primary-light: #c8553f;   /* 明るめの朱 */
+  --c-ink:           #1a1a1a;   /* 墨 */
+  --c-ink-soft:      #333333;
+  --c-text:          #2b2b2b;
+  --c-muted:         #6b6b6b;
+  --c-line:          #e3ddd2;   /* 罫線 */
+  --c-paper:         #faf6ee;   /* 生成り */
+  --c-paper-deep:    #f1ead9;   /* 一段濃い生成り */
+  --c-white:         #ffffff;
+  --c-gold:          #c8a45c;   /* 差し色の金 */
+  --c-line-green:    #06c755;   /* LINE 緑 */
+
+  /* ─── タイポグラフィ ─── */
+  --ff-serif: 'Shippori Mincho', 'Noto Serif JP', 'YuMincho', '游明朝', 'Hiragino Mincho ProN', serif;
+  --ff-sans:  'Noto Sans JP', 'Hiragino Sans', 'YuGothic', sans-serif;
+
+  --fs-base: 18px;     /* 本文 18px 指定 */
+  --fs-sm:   15px;
+  --fs-xs:   13px;
+  --fs-lg:   20px;
+  --fs-xl:   24px;
+  --fs-2xl:  32px;
+  --fs-3xl:  40px;
+
+  --lh-base: 1.85;
+  --lh-tight: 1.4;
+
+  /* ─── レイアウト ─── */
+  --content-w: 768px;     /* メインコンテンツ幅 */
+  --sidebar-w: 280px;     /* PC サイドバー幅 */
+  --gutter:    24px;
+  --gutter-sm: 16px;
+  --section-py:    72px;
+  --section-py-sm: 56px;
+
+  /* ─── その他 ─── */
+  --radius:    4px;
+  --radius-lg: 10px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --t-base: 0.25s ease;
+
+  /* ─── ブレークポイント参照値（情報共有用） ─── */
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+}

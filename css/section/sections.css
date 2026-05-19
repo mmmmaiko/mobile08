@@ -1,0 +1,186 @@
+/* ─── 全セクション共通 ─── */
+.section {
+  padding: var(--section-py-sm) 0;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .section { padding: var(--section-py) 0; }
+}
+
+.section--paper { background: var(--c-paper); }
+.section--paper-deep { background: var(--c-paper-deep); }
+.section--ink { background: var(--c-ink); color: var(--c-white); }
+.section--white { background: var(--c-white); }
+
+.section__inner {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter-sm);
+}
+
+@media (min-width: 768px) {
+  .section__inner { padding: 0 var(--gutter); }
+}
+
+/* ─── 見出し（縦罫 + 朱赤の章番号風） ─── */
+.section-heading {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.section-heading__en {
+  font-family: var(--ff-sans);
+  font-size: 12px;
+  letter-spacing: 0.42em;
+  color: var(--c-primary);
+  display: inline-block;
+  position: relative;
+  padding: 0 32px;
+}
+
+.section-heading__en::before,
+.section-heading__en::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 1px;
+  background: var(--c-primary);
+}
+
+.section-heading__en::before { left: 0; }
+.section-heading__en::after  { right: 0; }
+
+.section-heading__jp {
+  font-family: var(--ff-serif);
+  font-size: 26px;
+  letter-spacing: 0.18em;
+  margin-top: 12px;
+  color: var(--c-ink);
+}
+
+.section--ink .section-heading__en { color: var(--c-gold); }
+.section--ink .section-heading__en::before,
+.section--ink .section-heading__en::after { background: var(--c-gold); }
+.section--ink .section-heading__jp { color: var(--c-white); }
+
+@media (min-width: 768px) {
+  .section-heading { margin-bottom: 48px; }
+  .section-heading__jp { font-size: 32px; }
+}
+
+/* ─── 共通ボタン ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 220px;
+  padding: 14px 28px;
+  font-family: var(--ff-serif);
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  border-radius: 2px;
+  transition: background var(--t-base), color var(--t-base), border-color var(--t-base);
+}
+
+.btn--primary {
+  background: var(--c-primary);
+  color: var(--c-white);
+}
+
+.btn--primary:hover {
+  background: var(--c-primary-dark);
+  opacity: 1;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--c-ink);
+  border: 1px solid var(--c-ink);
+}
+
+.btn--ghost:hover {
+  background: var(--c-ink);
+  color: var(--c-white);
+  opacity: 1;
+}
+
+.btn--ghost-light {
+  background: transparent;
+  color: var(--c-white);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn--ghost-light:hover {
+  background: var(--c-white);
+  color: var(--c-ink);
+  opacity: 1;
+}
+
+.btn--line {
+  background: var(--c-line-green);
+  color: var(--c-white);
+}
+
+.btn--line:hover { opacity: 0.88; }
+
+.btn__arrow {
+  display: inline-block;
+  width: 14px;
+  height: 1px;
+  background: currentColor;
+  position: relative;
+}
+
+.btn__arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* ─── PDF 埋め込み（A4縦） ─── */
+.pdf-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 595 / 842;     /* A4 ポートレート */
+  max-height: 92vh;
+  background: var(--c-white);
+  border: 1px solid var(--c-line);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.pdf-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.pdf-embed__sub {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.pdf-embed__sub a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--c-primary);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+.section--ink .pdf-embed__sub a { color: var(--c-gold); }

@@ -1,0 +1,48 @@
+/* ─── 公式LINE フローティングボタン ─── */
+.line-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 45;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px 12px 14px;
+  background: var(--c-line-green);
+  color: var(--c-white);
+  border-radius: 999px;
+  box-shadow: var(--shadow-md);
+  font-family: var(--ff-sans);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  transition: transform var(--t-base), opacity var(--t-base);
+}
+
+.line-fab:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.line-fab__icon {
+  width: 26px;
+  height: 26px;
+  fill: var(--c-white);
+}
+
+.line-fab__label {
+  white-space: nowrap;
+}
+
+/* スクロール前は控えめ、スクロール後は強調 */
+body.is-scrolled .line-fab {
+  box-shadow: 0 10px 24px rgba(6, 199, 85, 0.35);
+}
+
+@media (max-width: 480px) {
+  .line-fab { padding: 10px 14px 10px 12px; font-size: 13px; }
+  .line-fab__icon { width: 22px; height: 22px; }
+}
+
+@media (min-width: 1024px) {
+  .line-fab { right: 24px; bottom: 24px; }
+}

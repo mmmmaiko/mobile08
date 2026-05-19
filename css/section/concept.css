@@ -1,0 +1,68 @@
+/* ─── コンセプト ─── */
+.concept {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.concept__photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.concept__photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.concept__photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 10px;
+  pointer-events: none;
+}
+
+.concept__catch {
+  font-family: var(--ff-serif);
+  font-size: 22px;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  color: var(--c-ink);
+  border-left: 3px solid var(--c-primary);
+  padding-left: 14px;
+  margin-bottom: 18px;
+}
+
+.concept__text {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+.concept__list {
+  margin-top: 28px;
+  border-top: 1px solid var(--c-line);
+}
+
+.concept__row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--c-line);
+  font-size: 15px;
+}
+
+.concept__row dt {
+  font-family: var(--ff-serif);
+  color: var(--c-primary);
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 768px) {
+  .concept__catch { font-size: 26px; }
+  .concept__text { font-size: 17px; }
+}

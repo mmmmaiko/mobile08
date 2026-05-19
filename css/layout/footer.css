@@ -1,0 +1,77 @@
+/* ─── フッター ─── */
+.footer {
+  margin-top: 80px;
+  background: var(--c-ink);
+  color: rgba(255, 255, 255, 0.82);
+  padding: 56px 0 32px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer__inner {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter-sm);
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.footer__logo-jp {
+  font-family: var(--ff-serif);
+  font-size: 22px;
+  color: var(--c-white);
+  letter-spacing: 0.14em;
+}
+
+.footer__logo-en {
+  font-family: var(--ff-sans);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: var(--c-gold);
+}
+
+.footer__address {
+  font-style: normal;
+  margin-bottom: 6px;
+}
+
+.footer__tel {
+  margin-bottom: 24px;
+  letter-spacing: 0.06em;
+}
+
+.footer__tel a {
+  font-family: var(--ff-serif);
+  font-size: 20px;
+  color: var(--c-white);
+  margin-left: 6px;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 18px;
+  margin-bottom: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer__nav a {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.footer__copy {
+  font-family: var(--ff-sans);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.5);
+}
